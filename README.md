@@ -33,3 +33,40 @@ This is a simple full-stack form application built using the **MERN stack** with
 ```bash
 git clone https://github.com/neeshoo/react-express-sql-form.git
 cd react-express-sql-form
+
+
+# Install backend dependencies
+cd server
+npm install
+
+# Install frontend dependencies
+cd ../client
+npm install
+
+
+# Start PostgreSQL and Create Table
+Make sure PostgreSQL is running.
+Run this SQL to create the table:
+
+sql
+Copy
+Edit
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name TEXT,
+  email TEXT,
+  phone TEXT
+);
+
+
+# Run the App
+bash
+Copy
+Edit
+# Start backend
+cd server
+node index.js
+
+# Start frontend
+cd ../client
+npm start
